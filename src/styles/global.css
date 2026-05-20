@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  
+  --color-brand-orange: #f97316;
+  --color-brand-amber: #ffb703;
+  --color-brand-dark: #0f1115;
+  --color-brand-cyan: #00f5ff;
+}
+
+/* Custom Base Styles */
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #07080a;
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: rgba(10, 11, 14, 0.75);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(13, 15, 19, 0.6);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.glow-btn {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.glow-btn::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, var(--color-brand-orange), var(--color-brand-amber), var(--color-brand-cyan));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+
+.glow-btn:hover::after {
+  opacity: 0.7;
+}
+
+/* Custom scrollbar for custom styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Premium Tech/Cyber Utilities */
+.cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(249, 115, 22, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
+}
+
+.animated-glow-border {
+  position: relative;
+  border-radius: 28px;
+  background: rgba(8, 9, 12, 0.9);
+  padding: 1px; /* border thickness */
+  overflow: hidden;
+}
+
+.animated-glow-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 15%,
+    var(--color-brand-orange) 35%,
+    var(--color-brand-amber) 50%,
+    var(--color-brand-cyan) 65%,
+    transparent 85%
+  );
+  animation: rotate-border 8s linear infinite;
+  z-index: 1;
+}
+
+.animated-glow-border-content {
+  position: relative;
+  border-radius: 27px;
+  background: #08090c;
+  z-index: 2;
+  height: 100%;
+}
+
+@keyframes rotate-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom transitions and scroll margins */
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+

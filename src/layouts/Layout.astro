@@ -1,23 +1,71 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Qreative - Beautiful Custom QR Codes for Free", 
+	description = "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo and export in high-res SVG, PNG or JPEG. 100% in your browser." 
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://devcito.org').href;
+const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Qreative" />
+		<link rel="canonical" href={canonicalUrl} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Qreative" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImageUrl} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImageUrl} />
+
+		<!-- JSON-LD Structured Data for SEO -->
+		<script type="application/ld+json" is:inline>
+			{
+				"@context": "https://schema.org",
+				"@type": "WebApplication",
+				"name": "Qreative",
+				"url": "https://devcito.org",
+				"description": "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo, and export in high-resolution SVG, PNG, or JPEG formats.",
+				"applicationCategory": "UtilityApplication",
+				"operatingSystem": "All",
+				"browserRequirements": "Requires JavaScript. Requires HTML5.",
+				"offers": {
+					"@type": "Offer",
+					"price": "0.00",
+					"priceCurrency": "USD"
+				}
+			}
+		</script>
 	</head>
-	<body>
+	<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col font-sans antialiased selection:bg-purple-500/30 selection:text-purple-200">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
