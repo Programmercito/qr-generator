@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://devcito.org',
+  site: 'https://qr.devcito.org',
+  outDir: 'docs',
   vite: {
     plugins: [tailwindcss()],
   },

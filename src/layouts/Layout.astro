@@ -11,7 +11,7 @@ const {
 	description = "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo and export in high-res SVG, PNG or JPEG. 100% in your browser." 
 } = Astro.props;
 
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://devcito.org').href;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://qr.devcito.org').href;
 const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
 ---
 
@@ -52,7 +52,7 @@ const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
 				"@context": "https://schema.org",
 				"@type": "WebApplication",
 				"name": "Qreative",
-				"url": "https://devcito.org",
+				"url": "https://qr.devcito.org",
 				"description": "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo, and export in high-resolution SVG, PNG, or JPEG formats.",
 				"applicationCategory": "UtilityApplication",
 				"operatingSystem": "All",
