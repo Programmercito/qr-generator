@@ -612,6 +612,8 @@
     let currentDataType = 'url';
     let currentFormat = 'png';
     let uploadedLogoDataUrl = null;
+    let isInitialized = false;
+    let updateTimeout = null;
 
     // Default configuration options
     const defaultOptions = {
@@ -787,7 +789,34 @@
         }
       }
 
+      if (isInitialized && qrTarget) {
+        if (!qrTarget.classList.contains('qr-updating')) {
+          qrTarget.classList.remove('qr-flash');
+          qrTarget.classList.add('qr-updating');
+        }
+      }
+
       qrCode.update(updatedOptions);
+
+      if (isInitialized && qrTarget) {
+        if (updateTimeout) {
+          clearTimeout(updateTimeout);
+        }
+        
+        updateTimeout = setTimeout(() => {
+          if (qrTarget) {
+            qrTarget.classList.remove('qr-updating');
+            qrTarget.classList.add('qr-flash');
+            
+            // Remove flash class after its animation ends
+            setTimeout(() => {
+              if (qrTarget) {
+                qrTarget.classList.remove('qr-flash');
+              }
+            }, 600);
+          }
+        }, 300);
+      }
     }
 
     // --- FORM SWITCHING LOGIC ---
@@ -1231,5 +1260,10 @@
 
     // Initialize with standard styling on mount
     applyPreset('standard');
+    
+    // Set isInitialized to true after initial setup
+    setTimeout(() => {
+      isInitialized = true;
+    }, 100);
   });
 </script>

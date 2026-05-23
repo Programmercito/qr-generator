@@ -128,3 +128,89 @@ body {
   scroll-margin-top: 5rem;
 }
 
+/* --- QR CODE GENERATION TRANSITION EFFECTS --- */
+
+/* Base target styling */
+#qr-target {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+/* Target the children canvas or svg inside qr-target */
+#qr-target > canvas,
+#qr-target > svg {
+  transition: filter 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              opacity 0.3s ease;
+  will-change: filter, transform, opacity;
+}
+
+/* Updating/Compiling state: scale down, rotate slightly, blur, and lower opacity */
+#qr-target.qr-updating > canvas,
+#qr-target.qr-updating > svg {
+  filter: blur(8px) brightness(1.15) contrast(0.9);
+  transform: scale(0.90) rotate(-3deg);
+  opacity: 0.4;
+  transition: filter 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* cyber scanning line overlay when updating */
+#qr-target::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(249, 115, 22, 0.05) 30%,
+    rgba(249, 115, 22, 0.35) 50%,
+    rgba(249, 115, 22, 0.05) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 10;
+}
+
+#qr-target.qr-updating::after {
+  opacity: 1;
+  animation: qr-scan-line 0.8s linear infinite;
+}
+
+@keyframes qr-scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Success ring flash effect when generation completes */
+#qr-target.qr-flash::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 15;
+  box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5), inset 0 0 20px rgba(249, 115, 22, 0.4);
+  animation: qr-ripple-flash 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes qr-ripple-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6), inset 0 0 25px rgba(249, 115, 22, 0.5);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgba(249, 115, 22, 0), inset 0 0 0px rgba(249, 115, 22, 0);
+    opacity: 0;
+  }
+}
+
+
