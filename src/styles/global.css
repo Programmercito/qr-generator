@@ -6,10 +6,10 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-display: 'Outfit', system-ui, sans-serif;
   
-  --color-brand-orange: #f97316;
-  --color-brand-amber: #ffb703;
+  --color-brand-primary: #2563eb;
+  --color-brand-secondary: #0ea5e9;
+  --color-brand-accent: #6366f1;
   --color-brand-dark: #0f1115;
-  --color-brand-cyan: #00f5ff;
 }
 
 /* Custom Base Styles */
@@ -18,7 +18,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #07080a;
+  background-color: #080b14;
   color: #e2e8f0;
   font-family: var(--font-sans);
   scroll-behavior: smooth;
@@ -47,7 +47,7 @@ body {
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(90deg, var(--color-brand-orange), var(--color-brand-amber), var(--color-brand-cyan));
+  background: linear-gradient(90deg, var(--color-brand-primary), var(--color-brand-secondary), var(--color-brand-accent));
   border-radius: inherit;
   z-index: -1;
   opacity: 0;
@@ -64,7 +64,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #07080a;
+  background: #080b14;
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
@@ -78,8 +78,8 @@ body {
 .cyber-grid {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(249, 115, 22, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(249, 115, 22, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
 }
 
 .animated-glow-border {
@@ -100,9 +100,9 @@ body {
   background: conic-gradient(
     from 0deg,
     transparent 15%,
-    var(--color-brand-orange) 35%,
-    var(--color-brand-amber) 50%,
-    var(--color-brand-cyan) 65%,
+    var(--color-brand-primary) 35%,
+    var(--color-brand-secondary) 50%,
+    var(--color-brand-accent) 65%,
     transparent 85%
   );
   animation: rotate-border 8s linear infinite;
@@ -123,9 +123,110 @@ body {
   }
 }
 
-/* Custom transitions and scroll margins */
-.scroll-mt-20 {
-  scroll-margin-top: 5rem;
+/* --- Landing animation layer --- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Slow drifting aurora blobs behind the hero */
+@keyframes aurora-drift {
+  0%   { transform: translate(-15%, 0) scale(1); }
+  50%  { transform: translate(12%, 8%) scale(1.18); }
+  100% { transform: translate(-15%, 0) scale(1); }
+}
+.aurora {
+  animation: aurora-drift 22s ease-in-out infinite;
+}
+.aurora-slow {
+  animation-duration: 31s;
+  animation-delay: -9s;
+}
+
+/* Gentle levitation for the hero mockup */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: gentle-float 7s ease-in-out infinite;
+}
+
+/* Reveal on scroll (used by feature cards) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* Keep the preview box stable while downloads re-render at export resolution */
+/* (canvas/svg are created at runtime by qr-code-styling, so global CSS is required) */
+#qr-target > canvas,
+#qr-target > svg {
+  max-width: 280px;
+  max-height: 280px;
+}
+
+/* Toast notifications (created dynamically, must be unscoped) */
+#toast-container .toast {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(13, 15, 19, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.8);
+  animation: toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#toast-container .toast-success { border-color: rgba(34, 197, 94, 0.35); }
+#toast-container .toast-success .toast-icon { color: #4ade80; }
+#toast-container .toast-error { border-color: rgba(239, 68, 68, 0.4); }
+#toast-container .toast-error .toast-icon { color: #f87171; }
+
+#toast-container .toast.toast-out {
+  animation: toast-out 0.25s ease both;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes toast-out {
+  to { opacity: 0; transform: translateY(8px) scale(0.96); }
 }
 
 /* --- QR CODE GENERATION TRANSITION EFFECTS --- */
@@ -165,9 +266,9 @@ body {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(249, 115, 22, 0.05) 30%,
-    rgba(249, 115, 22, 0.35) 50%,
-    rgba(249, 115, 22, 0.05) 70%,
+    rgba(37, 99, 235, 0.05) 30%,
+    rgba(37, 99, 235, 0.35) 50%,
+    rgba(37, 99, 235, 0.05) 70%,
     transparent 100%
   );
   opacity: 0;
@@ -198,17 +299,17 @@ body {
   border-radius: inherit;
   pointer-events: none;
   z-index: 15;
-  box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5), inset 0 0 20px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5), inset 0 0 20px rgba(37, 99, 235, 0.4);
   animation: qr-ripple-flash 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes qr-ripple-flash {
   0% {
-    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6), inset 0 0 25px rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6), inset 0 0 25px rgba(37, 99, 235, 0.5);
     opacity: 1;
   }
   100% {
-    box-shadow: 0 0 0 15px rgba(249, 115, 22, 0), inset 0 0 0px rgba(249, 115, 22, 0);
+    box-shadow: 0 0 0 15px rgba(37, 99, 235, 0), inset 0 0 0px rgba(37, 99, 235, 0);
     opacity: 0;
   }
 }

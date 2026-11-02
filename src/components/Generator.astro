@@ -1,13 +1,13 @@
 <!-- Workspace Section -->
 <section id="generator" class="cyber-grid relative w-full py-16 border-t border-b border-white/5 scroll-mt-20">
   <!-- Decorative Glows for this section specifically -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
 
   <div class="max-w-7xl mx-auto px-6">
     
     <!-- Section Title -->
     <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 text-orange-400 text-xs font-semibold uppercase tracking-wider">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 text-sky-300 text-xs font-semibold uppercase tracking-wider">
         Live Editor
       </div>
       <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-white font-black">
@@ -19,7 +19,7 @@
     </div>
 
     <!-- Glowing Border Wrapper -->
-    <div class="animated-glow-border shadow-2xl shadow-orange-500/5">
+    <div class="animated-glow-border shadow-2xl shadow-blue-500/5">
       <div class="animated-glow-border-content p-6 sm:p-8 lg:p-10">
         
         <div class="grid lg:grid-cols-12 gap-8 items-start">
@@ -30,29 +30,29 @@
             <!-- SECTION 1: Content Type -->
             <div class="glass-card rounded-2xl p-6">
               <h2 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
-                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-orange-500/10 text-orange-400 text-sm">1</span>
+                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-blue-500/10 text-sky-300 text-sm">1</span>
                 What do you want to encode?
               </h2>
               
               <!-- Content Tabs -->
-              <div class="grid grid-cols-5 gap-1.5 p-1 rounded-xl bg-slate-950/50 border border-white/5 mb-6">
-                <button data-type="url" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 active bg-white/5 text-orange-400 cursor-pointer">
+              <div class="grid grid-cols-5 gap-1.5 p-1 rounded-xl bg-slate-950/50 border border-white/5 mb-6" role="tablist" aria-label="Content type">
+                <button data-type="url" role="tab" aria-selected="true" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 active bg-white/5 text-sky-300 cursor-pointer">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
                   <span>Link</span>
                 </button>
-                <button data-type="wifi" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
+                <button data-type="wifi" role="tab" aria-selected="false" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10.5 10.5 0 0114.14 0M1.34 6.344a16.5 16.5 0 0121.32 0" /></svg>
                   <span>WiFi</span>
                 </button>
-                <button data-type="vcard" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
+                <button data-type="vcard" role="tab" aria-selected="false" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M21 12h-4m4 4h-4" /></svg>
                   <span>Contact</span>
                 </button>
-                <button data-type="email" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
+                <button data-type="email" role="tab" aria-selected="false" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   <span>Email</span>
                 </button>
-                <button data-type="sms" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
+                <button data-type="sms" role="tab" aria-selected="false" class="tab-btn py-2 text-xs font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-white/5 transition-all flex flex-col items-center gap-1 cursor-pointer">
                   <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
                   <span>SMS</span>
                 </button>
@@ -68,7 +68,7 @@
                     <textarea 
                       id="url-data" 
                       rows="3" 
-                      class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors placeholder:text-gray-600"
+                      class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors placeholder:text-gray-600"
                       placeholder="https://example.com or any text to encode..."
                     >https://devcito.org</textarea>
                   </div>
@@ -79,24 +79,24 @@
                   <div class="grid md:grid-cols-2 gap-4">
                     <div>
                       <label for="wifi-ssid" class="block text-xs font-semibold text-gray-400 mb-2">Network Name (SSID)</label>
-                      <input type="text" id="wifi-ssid" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="My WiFi Network" />
+                      <input type="text" id="wifi-ssid" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="My WiFi Network" />
                     </div>
                     <div>
                       <label for="wifi-password" class="block text-xs font-semibold text-gray-400 mb-2">Password</label>
-                      <input type="password" id="wifi-password" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="Network password" />
+                      <input type="password" id="wifi-password" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="Network password" />
                     </div>
                   </div>
                   <div class="grid md:grid-cols-2 gap-4 items-center">
                     <div>
                       <label for="wifi-encryption" class="block text-xs font-semibold text-gray-400 mb-2">Security</label>
-                      <select id="wifi-encryption" class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors">
+                      <select id="wifi-encryption" class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors">
                         <option value="WPA">WPA/WPA2</option>
                         <option value="WEP">WEP</option>
                         <option value="nopass">No Security (Open)</option>
                       </select>
                     </div>
                     <div class="flex items-center gap-2 pt-5">
-                      <input type="checkbox" id="wifi-hidden" class="rounded border-white/10 bg-slate-950 text-orange-500 focus:ring-0 w-4 h-4 cursor-pointer" />
+                      <input type="checkbox" id="wifi-hidden" class="rounded border-white/10 bg-slate-950 text-blue-500 focus:ring-0 w-4 h-4 cursor-pointer" />
                       <label for="wifi-hidden" class="text-xs font-semibold text-gray-400 cursor-pointer select-none">Hidden Network?</label>
                     </div>
                   </div>
@@ -107,36 +107,36 @@
                   <div class="grid md:grid-cols-2 gap-4">
                     <div>
                       <label for="vcard-fn" class="block text-xs font-semibold text-gray-400 mb-2">First Name</label>
-                      <input type="text" id="vcard-fn" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="John" />
+                      <input type="text" id="vcard-fn" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="John" />
                     </div>
                     <div>
                       <label for="vcard-ln" class="block text-xs font-semibold text-gray-400 mb-2">Last Name</label>
-                      <input type="text" id="vcard-ln" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="Doe" />
+                      <input type="text" id="vcard-ln" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="Doe" />
                     </div>
                   </div>
                   <div class="grid md:grid-cols-2 gap-4">
                     <div>
                       <label for="vcard-phone" class="block text-xs font-semibold text-gray-400 mb-2">Phone</label>
-                      <input type="text" id="vcard-phone" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="+1 555 000 000" />
+                      <input type="text" id="vcard-phone" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="+1 555 000 000" />
                     </div>
                     <div>
                       <label for="vcard-email" class="block text-xs font-semibold text-gray-400 mb-2">Email Address</label>
-                      <input type="email" id="vcard-email" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="john.doe@company.com" />
+                      <input type="email" id="vcard-email" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="john.doe@company.com" />
                     </div>
                   </div>
                   <div class="grid md:grid-cols-3 gap-4">
                     <div class="md:col-span-2">
                       <label for="vcard-org" class="block text-xs font-semibold text-gray-400 mb-2">Organization / Company</label>
-                      <input type="text" id="vcard-org" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="Company Inc." />
+                      <input type="text" id="vcard-org" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="Company Inc." />
                     </div>
                     <div>
                       <label for="vcard-title" class="block text-xs font-semibold text-gray-400 mb-2">Job Title</label>
-                      <input type="text" id="vcard-title" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="Manager" />
+                      <input type="text" id="vcard-title" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="Manager" />
                     </div>
                   </div>
                   <div>
                     <label for="vcard-url" class="block text-xs font-semibold text-gray-400 mb-2">Website</label>
-                    <input type="text" id="vcard-url" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="https://mywebsite.com" />
+                    <input type="text" id="vcard-url" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="https://mywebsite.com" />
                   </div>
                 </div>
 
@@ -145,16 +145,16 @@
                   <div class="grid md:grid-cols-2 gap-4">
                     <div class="md:col-span-2">
                       <label for="email-to" class="block text-xs font-semibold text-gray-400 mb-2">Recipient (Email)</label>
-                      <input type="email" id="email-to" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="email@example.com" />
+                      <input type="email" id="email-to" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="email@example.com" />
                     </div>
                     <div class="md:col-span-2">
                       <label for="email-subject" class="block text-xs font-semibold text-gray-400 mb-2">Subject</label>
-                      <input type="text" id="email-subject" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="Hello from Qreative" />
+                      <input type="text" id="email-subject" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="Hello from Qreative" />
                     </div>
                   </div>
                   <div>
                     <label for="email-body" class="block text-xs font-semibold text-gray-400 mb-2">Message</label>
-                    <textarea id="email-body" rows="3" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors placeholder:text-gray-600" placeholder="Email body content..."></textarea>
+                    <textarea id="email-body" rows="3" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors placeholder:text-gray-600" placeholder="Email body content..."></textarea>
                   </div>
                 </div>
 
@@ -162,11 +162,11 @@
                 <div id="form-sms" class="form-container space-y-4 hidden">
                   <div>
                     <label for="sms-phone" class="block text-xs font-semibold text-gray-400 mb-2">Phone Number</label>
-                    <input type="text" id="sms-phone" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors" placeholder="+1 555 000 000" />
+                    <input type="text" id="sms-phone" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors" placeholder="+1 555 000 000" />
                   </div>
                   <div>
                     <label for="sms-message" class="block text-xs font-semibold text-gray-400 mb-2">Text Message</label>
-                    <textarea id="sms-message" rows="3" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500/50 transition-colors placeholder:text-gray-600" placeholder="SMS message content..."></textarea>
+                    <textarea id="sms-message" rows="3" class="w-full bg-slate-950/50 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors placeholder:text-gray-600" placeholder="SMS message content..."></textarea>
                   </div>
                 </div>
 
@@ -176,50 +176,92 @@
             <!-- SECTION 2: Design Presets -->
             <div class="glass-card rounded-2xl p-6">
               <h2 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
-                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400 text-sm">2</span>
+                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-400 text-sm">2</span>
                 Save time: Choose a quick design
               </h2>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                <button data-preset="sunset" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-orange-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                <button data-preset="sunset" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
                   <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-500 to-zinc-700 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Stealth Carbon</div>
                     <span class="text-[10px] text-gray-500">Orange & Carbon</span>
                   </div>
                 </button>
-                <button data-preset="cyberpunk" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-orange-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                <button data-preset="cyberpunk" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
                   <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-cyan-500 to-slate-700 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Stealth Cyber</div>
                     <span class="text-[10px] text-gray-500">Cyan & Steel Gray</span>
                   </div>
                 </button>
-                <button data-preset="midnight" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-orange-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                <button data-preset="midnight" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
                   <span class="w-6 h-6 rounded-full bg-zinc-900 border border-zinc-700 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Obsidian Matte</div>
                     <span class="text-[10px] text-gray-500">Pure Graphite</span>
                   </div>
                 </button>
-                <button data-preset="forest" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-orange-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                <button data-preset="forest" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
                   <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-slate-400 to-slate-600 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Bionic Steel</div>
                     <span class="text-[10px] text-gray-500">Industrial Steel</span>
                   </div>
                 </button>
-                <button data-preset="royal" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-orange-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
-                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-600 to-orange-850 flex-shrink-0"></span>
+                <button data-preset="royal" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-amber-600 to-orange-900 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Copper Alloy</div>
                     <span class="text-[10px] text-gray-500">Copper & Bronze</span>
                   </div>
                 </button>
-                <button data-preset="standard" class="preset-btn text-left p-3 rounded-xl border border-orange-500/30 bg-slate-950/50 transition-all flex items-center gap-3 active cursor-pointer">
+                <button data-preset="ocean" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-blue-600 to-cyan-500 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Ocean Blue</div>
+                    <span class="text-[10px] text-gray-500">Blue & Cyan</span>
+                  </div>
+                </button>
+                <button data-preset="ink" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-indigo-900 to-sky-500 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Midnight Ink</div>
+                    <span class="text-[10px] text-gray-500">Indigo & Sky</span>
+                  </div>
+                </button>
+                <button data-preset="jade" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-900 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Jade Circuit</div>
+                    <span class="text-[10px] text-gray-500">Emerald & Pine</span>
+                  </div>
+                </button>
+                <button data-preset="rose" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-rose-500 to-amber-400 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Rosé Gold</div>
+                    <span class="text-[10px] text-gray-500">Rose & Amber</span>
+                  </div>
+                </button>
+                <button data-preset="violet" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-violet-500 to-fuchsia-500 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Ultra Violet</div>
+                    <span class="text-[10px] text-gray-500">Violet & Fuchsia</span>
+                  </div>
+                </button>
+                <button data-preset="executive" class="preset-btn text-left p-3 rounded-xl border border-white/5 hover:border-blue-500/30 bg-slate-950/30 transition-all flex items-center gap-3 cursor-pointer">
+                  <span class="w-6 h-6 rounded-full bg-slate-800 border border-slate-600 flex-shrink-0"></span>
+                  <div>
+                    <div class="text-xs font-bold text-white leading-none">Executive</div>
+                    <span class="text-[10px] text-gray-500">Graphite on Paper</span>
+                  </div>
+                </button>
+                <button data-preset="standard" class="preset-btn text-left p-3 rounded-xl border border-blue-500/30 bg-slate-950/50 transition-all flex items-center gap-3 active cursor-pointer">
                   <span class="w-6 h-6 rounded-full bg-black border border-white/20 flex-shrink-0"></span>
                   <div>
                     <div class="text-xs font-bold text-white leading-none">Traditional</div>
-                    <span class="text-[10px] text-orange-400">Black & White</span>
+                    <span class="text-[10px] text-sky-300">Black & White</span>
                   </div>
                 </button>
               </div>
@@ -228,14 +270,14 @@
             <!-- SECTION 3: Custom Styling Accordion -->
             <div class="glass-card rounded-2xl p-6 space-y-4">
               <h2 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
-                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-red-500/10 text-red-400 text-sm">3</span>
+                <span class="flex h-6 w-6 items-center justify-center rounded-lg bg-sky-500/10 text-sky-400 text-sm">3</span>
                 Detailed Customization
               </h2>
               
               <!-- Accordion 1: Puntos (Dots) -->
               <div class="accordion-item border border-white/5 rounded-xl bg-slate-950/20 overflow-hidden">
-                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer">
-                  <span>A. Dots Style & Color</span>
+                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer" aria-expanded="false">
+                  <span>A. Dots Style &amp; Color</span>
                   <svg class="w-4 h-4 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
                 <div class="accordion-content p-5 border-t border-white/5 space-y-5 hidden">
@@ -243,29 +285,65 @@
                   <div>
                     <span class="block text-xs font-semibold text-gray-400 mb-2">Dots Shape</span>
                     <div class="grid grid-cols-3 gap-2">
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="rounded" class="hidden" checked />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="2"/><rect x="10" y="2" width="6" height="6" rx="2"/><rect x="2" y="10" width="6" height="6" rx="2"/><rect x="10" y="10" width="6" height="6" rx="2"/></svg>
                         <span>Rounded</span>
                       </label>
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="extra-rounded" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="6" height="6" rx="3"/><rect x="10" y="2" width="6" height="6" rx="3"/><rect x="2" y="10" width="6" height="6" rx="3"/><rect x="10" y="10" width="6" height="6" rx="3"/></svg>
                         <span>Extra Rounded</span>
                       </label>
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="dots" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="3.2"/><circle cx="13" cy="5" r="3.2"/><circle cx="5" cy="13" r="3.2"/><circle cx="13" cy="13" r="3.2"/></svg>
                         <span>Circles</span>
                       </label>
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="classy-rounded" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="12" height="2.6" rx="1.3"/><rect x="3" y="7.7" width="12" height="2.6" rx="1.3"/><rect x="3" y="12.4" width="12" height="2.6" rx="1.3"/></svg>
                         <span>Classy Rounded</span>
                       </label>
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="classy" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="12" height="2.6" rx="0.3"/><rect x="3" y="7.7" width="12" height="2.6" rx="0.3"/><rect x="3" y="12.4" width="12" height="2.6" rx="0.3"/></svg>
                         <span>Classy Lines</span>
                       </label>
-                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                         <input type="radio" name="dots-type" value="square" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="6" height="6"/><rect x="10" y="2" width="6" height="6"/><rect x="2" y="10" width="6" height="6"/><rect x="10" y="10" width="6" height="6"/></svg>
                         <span>Square</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-heart" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 15.5C4 11.5 2.5 9 2.5 6.8 2.5 5 3.9 3.8 5.4 3.8c1.2 0 2.4.7 3.6 2 1.2-1.3 2.4-2 3.6-2 1.5 0 2.9 1.2 2.9 3 0 2.2-1.5 4.7-6.5 8.7z"/></svg>
+                        <span>Hearts</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-star" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 2l2.1 4.3 4.7.7-3.4 3.3.8 4.7L9 12.6 4.8 15l.8-4.7L2.2 7l4.7-.7z"/></svg>
+                        <span>Stars</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-ring" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="9" cy="9" r="6"/></svg>
+                        <span>Rings</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-diamond" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 2l5 7-5 7-5-7z"/></svg>
+                        <span>Diamonds</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-hexagon" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 2l6 3.5v7L9 16l-6-3.5v-7z"/></svg>
+                        <span>Hexagons</span>
+                      </label>
+                      <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
+                        <input type="radio" name="dots-type" value="deco-sparkle" class="hidden" />
+                        <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><path d="M9 1.5c.7 4.4 2.6 6.3 7 7-4.4.7-6.3 2.6-7 7-.7-4.4-2.6-6.3-7-7 4.4-.7 6.3-2.6 7-7z"/></svg>
+                        <span>Sparkles</span>
                       </label>
                     </div>
                   </div>
@@ -275,11 +353,11 @@
                     <span class="block text-xs font-semibold text-gray-400 mb-2">Color Mode</span>
                     <div class="flex gap-4">
                       <label class="flex items-center gap-2 text-xs text-gray-300 cursor-pointer select-none">
-                        <input type="radio" name="dots-color-mode" value="solid" checked class="rounded border-white/10 bg-slate-950 text-orange-500 focus:ring-0" />
+                        <input type="radio" name="dots-color-mode" value="solid" checked class="rounded border-white/10 bg-slate-950 text-blue-500 focus:ring-0" />
                         Solid Color
                       </label>
                       <label class="flex items-center gap-2 text-xs text-gray-300 cursor-pointer select-none">
-                        <input type="radio" name="dots-color-mode" value="gradient" class="rounded border-white/10 bg-slate-950 text-orange-500 focus:ring-0" />
+                        <input type="radio" name="dots-color-mode" value="gradient" class="rounded border-white/10 bg-slate-950 text-blue-500 focus:ring-0" />
                         Gradient
                       </label>
                     </div>
@@ -328,7 +406,7 @@
                       <div>
                         <label for="dots-grad-rotation" class="block text-xs font-semibold text-gray-400 mb-2">Rotation Angle</label>
                         <div class="flex items-center gap-2">
-                          <input type="range" id="dots-grad-rotation" min="0" max="360" value="45" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-orange-500" />
+                          <input type="range" id="dots-grad-rotation" min="0" max="360" value="45" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500" />
                           <span id="dots-grad-rotation-value" class="text-xs text-gray-300 font-mono">45°</span>
                         </div>
                       </div>
@@ -340,27 +418,30 @@
 
               <!-- Accordion 2: Esquinas (Corners) -->
               <div class="accordion-item border border-white/5 rounded-xl bg-slate-950/20 overflow-hidden">
-                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer">
+                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer" aria-expanded="false">
                   <span>B. Corner Styles (Finders)</span>
                   <svg class="w-4 h-4 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
                 <div class="accordion-content p-5 border-t border-white/5 space-y-6 hidden">
                   <!-- Outer Square -->
                   <div class="space-y-4">
-                    <h3 class="text-xs font-bold text-orange-400 uppercase tracking-wider">Corner Frame (Outer)</h3>
+                    <h3 class="text-xs font-bold text-sky-300 uppercase tracking-wider">Corner Frame (Outer)</h3>
                     <div>
                       <span class="block text-xs font-semibold text-gray-400 mb-2">Frame Shape</span>
                       <div class="grid grid-cols-3 gap-2">
-                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                           <input type="radio" name="corners-square-type" value="extra-rounded" class="hidden" checked />
+                          <svg class="w-5 h-5" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="2.5" y="2.5" width="13" height="13" rx="5"/></svg>
                           <span>Rounded</span>
                         </label>
-                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                           <input type="radio" name="corners-square-type" value="dot" class="hidden" />
+                          <svg class="w-5 h-5" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><circle cx="9" cy="9" r="6.2"/></svg>
                           <span>Circle</span>
                         </label>
-                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                           <input type="radio" name="corners-square-type" value="square" class="hidden" />
+                          <svg class="w-5 h-5" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><rect x="3" y="3" width="12" height="12" rx="0.5"/></svg>
                           <span>Square</span>
                         </label>
                       </div>
@@ -379,16 +460,18 @@
                   
                   <!-- Inner Dot -->
                   <div class="space-y-4 pt-4 border-t border-white/5">
-                    <h3 class="text-xs font-bold text-red-400 uppercase tracking-wider">Corner Center (Inner)</h3>
+                    <h3 class="text-xs font-bold text-sky-400 uppercase tracking-wider">Corner Center (Inner)</h3>
                     <div>
                       <span class="block text-xs font-semibold text-gray-400 mb-2">Center Shape</span>
                       <div class="grid grid-cols-2 gap-2">
-                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                           <input type="radio" name="corners-dot-type" value="dot" class="hidden" checked />
+                          <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="9" r="5"/></svg>
                           <span>Circle</span>
                         </label>
-                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex items-center justify-center text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950">
+                        <label class="cursor-pointer border border-white/5 rounded-xl p-2.5 flex flex-col items-center justify-center gap-1 text-center text-xs font-semibold text-gray-400 hover:text-white bg-slate-950/50 hover:bg-slate-950 transition-colors">
                           <input type="radio" name="corners-dot-type" value="square" class="hidden" />
+                          <svg class="w-5 h-5" viewBox="0 0 18 18" fill="currentColor" aria-hidden="true"><rect x="4" y="4" width="10" height="10" rx="1"/></svg>
                           <span>Square</span>
                         </label>
                       </div>
@@ -409,7 +492,7 @@
 
               <!-- Accordion 3: Fondo (Background) -->
               <div class="accordion-item border border-white/5 rounded-xl bg-slate-950/20 overflow-hidden">
-                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer">
+                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer" aria-expanded="false">
                   <span>C. QR Code Background</span>
                   <svg class="w-4 h-4 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -426,7 +509,7 @@
                     </div>
                     
                     <div class="flex items-center gap-2">
-                      <input type="checkbox" id="bg-transparent" class="rounded border-white/10 bg-slate-950 text-orange-500 focus:ring-0 w-4 h-4 cursor-pointer" />
+                      <input type="checkbox" id="bg-transparent" class="rounded border-white/10 bg-slate-950 text-blue-500 focus:ring-0 w-4 h-4 cursor-pointer" />
                       <label for="bg-transparent" class="text-xs font-semibold text-gray-400 cursor-pointer select-none">Transparent Background</label>
                     </div>
                   </div>
@@ -435,7 +518,7 @@
 
               <!-- Accordion 4: Logotipo (Logo) -->
               <div class="accordion-item border border-white/5 rounded-xl bg-slate-950/20 overflow-hidden">
-                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer">
+                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer" aria-expanded="false">
                   <span>D. Insert Your Logo</span>
                   <svg class="w-4 h-4 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -460,7 +543,7 @@
                         <span>Logo Size</span>
                         <span id="logo-size-val" class="font-mono text-white text-xs">20%</span>
                       </div>
-                      <input type="range" id="logo-size" min="5" max="35" value="20" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-orange-500" />
+                      <input type="range" id="logo-size" min="5" max="35" value="20" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500" />
                     </div>
                     
                     <div>
@@ -468,13 +551,42 @@
                         <span>Logo Padding (Margin)</span>
                         <span id="logo-margin-val" class="font-mono text-white text-xs">5px</span>
                       </div>
-                      <input type="range" id="logo-margin" min="0" max="20" value="5" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-orange-500" />
+                      <input type="range" id="logo-margin" min="0" max="20" value="5" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500" />
                     </div>
                     
                     <div class="flex items-center gap-2">
-                      <input type="checkbox" id="logo-clear" checked class="rounded border-white/10 bg-slate-950 text-orange-500 focus:ring-0 w-4 h-4 cursor-pointer" />
+                      <input type="checkbox" id="logo-clear" checked class="rounded border-white/10 bg-slate-950 text-blue-500 focus:ring-0 w-4 h-4 cursor-pointer" />
                       <label for="logo-clear" class="text-xs font-semibold text-gray-400 cursor-pointer select-none">Clear background behind logo</label>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accordion 5: Quality & Export -->
+              <div class="accordion-item border border-white/5 rounded-xl bg-slate-950/20 overflow-hidden">
+                <button class="accordion-toggle w-full px-5 py-4 flex items-center justify-between text-sm font-bold text-white hover:bg-white/5 transition-colors cursor-pointer" aria-expanded="false">
+                  <span>E. Quality &amp; Export</span>
+                  <svg class="w-4 h-4 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+                <div class="accordion-content p-5 border-t border-white/5 space-y-5 hidden">
+                  <div>
+                    <label for="ecc-level" class="block text-xs font-semibold text-gray-400 mb-2">Error Correction Level</label>
+                    <select id="ecc-level" class="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500/50 transition-colors">
+                      <option value="L">Low (7%) — maximum data capacity</option>
+                      <option value="M">Medium (15%) — balanced</option>
+                      <option value="Q">Quartile (25%) — robust</option>
+                      <option value="H" selected>High (30%) — best with logos</option>
+                    </select>
+                    <p class="text-[10px] text-gray-500 mt-1.5 leading-relaxed">Higher correction survives damage and center logos, but fits less data. Use M or Q for long URLs.</p>
+                  </div>
+
+                  <div>
+                    <div class="flex justify-between items-center text-xs text-gray-400 mb-2">
+                      <span>Export Resolution (PNG/JPEG)</span>
+                      <span id="export-size-val" class="font-mono text-white text-xs">1024px</span>
+                    </div>
+                    <input type="range" id="export-size" min="256" max="2048" step="256" value="1024" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500" />
+                    <p class="text-[10px] text-gray-500 mt-1.5 leading-relaxed">The preview stays fast; downloads are re-rendered at this size. SVG output is always vector.</p>
                   </div>
                 </div>
               </div>
@@ -487,22 +599,28 @@
           <section class="lg:col-span-5 sticky top-24 space-y-6">
             
             <!-- Live Preview Container -->
-            <div class="relative rounded-3xl p-1 bg-gradient-to-tr from-orange-500/20 via-amber-500/10 to-transparent border border-white/5">
+            <div class="relative rounded-3xl p-1 bg-gradient-to-tr from-blue-500/20 via-indigo-500/10 to-transparent border border-white/5">
               <div class="glass-card rounded-[22px] p-8 flex flex-col items-center">
                 
                 <div class="w-full flex items-center justify-between border-b border-white/5 pb-4 mb-6">
                   <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Live Preview</span>
-                  <button id="reset-btn" class="text-xs font-semibold text-orange-400 hover:text-orange-300 transition-colors flex items-center gap-1 cursor-pointer">
+                  <button id="reset-btn" class="text-xs font-semibold text-sky-300 hover:text-sky-200 transition-colors flex items-center gap-1 cursor-pointer">
                     <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H18" /></svg>
                     Reset
                   </button>
+                </div>
+
+                <!-- Live contrast validation badge -->
+                <div id="contrast-badge" class="w-full mb-5 flex items-center gap-2 text-[11px] font-semibold rounded-xl px-3 py-2.5 transition-all duration-300" role="status" aria-live="polite">
+                  <span id="contrast-dot" class="w-2 h-2 rounded-full flex-shrink-0 bg-gray-400"></span>
+                  <span id="contrast-text" class="leading-tight">Checking contrast...</span>
                 </div>
                 
                 <!-- Canvas target container -->
                 <div id="qr-target" class="relative p-6 rounded-2xl bg-white flex items-center justify-center shadow-2xl transition-all duration-300 select-none min-h-[290px] min-w-[290px]">
                   <!-- We will append the canvas here -->
                   <div id="qr-spinner" class="absolute inset-0 flex items-center justify-center bg-white rounded-2xl">
-                    <svg class="animate-spin h-8 w-8 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg class="animate-spin h-8 w-8 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -512,7 +630,7 @@
                 <!-- Export Formats & Download Button -->
                 <div class="w-full space-y-4 mt-8">
                   <div class="grid grid-cols-3 gap-2">
-                    <button data-format="png" class="format-btn py-2 text-xs font-bold rounded-xl border border-orange-500/30 bg-orange-500/10 text-orange-400 transition-all cursor-pointer">
+                    <button data-format="png" class="format-btn py-2 text-xs font-bold rounded-xl border border-blue-500/30 bg-blue-500/10 text-sky-300 transition-all cursor-pointer">
                       PNG
                     </button>
                     <button data-format="svg" class="format-btn py-2 text-xs font-bold rounded-xl border border-white/5 bg-slate-950/40 text-gray-400 hover:text-white transition-all cursor-pointer">
@@ -525,7 +643,7 @@
                   
                   <button 
                     id="download-btn"
-                    class="glow-btn relative w-full inline-flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-orange-600 via-amber-500 to-yellow-500 shadow-xl shadow-orange-500/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 cursor-pointer"
+                    class="glow-btn relative w-full inline-flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-blue-700 to-indigo-600 shadow-xl shadow-blue-500/20 hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 cursor-pointer"
                   >
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
                     Download QR Code
@@ -545,11 +663,11 @@
 
             <div class="glass-panel p-5 rounded-2xl border border-white/5 space-y-2.5">
               <h4 class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
-                <svg class="w-4 h-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg class="w-4 h-4 text-sky-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 Scanning Tip
               </h4>
               <p class="text-xs text-gray-400 leading-relaxed">
-                Maintain adequate contrast between the dots (dark) and background (light). If adding a logo, size above 25% might affect scanning on older devices.
+                The badge above checks dots vs. background contrast live. If adding a logo, sizes above 25% might affect scanning on older devices.
               </p>
             </div>
 
@@ -562,6 +680,24 @@
 
   </div>
 </section>
+
+<!-- Mobile floating preview bar (hidden on desktop, appears when the generator is on screen) -->
+<div id="mobile-bar" class="fixed inset-x-0 bottom-0 z-40 lg:hidden px-4 pb-4 pointer-events-none">
+  <div class="pointer-events-auto glass-panel rounded-2xl border border-white/10 p-3 flex items-center gap-3 shadow-2xl shadow-black/60">
+    <img id="mini-qr" alt="Live QR preview" class="h-12 w-12 rounded-lg bg-white object-contain flex-shrink-0" />
+    <div class="flex-1 min-w-0">
+      <div class="text-[11px] font-bold text-white uppercase tracking-wider">Live Preview</div>
+      <div class="text-[10px] text-gray-500">Format: <span id="mini-format">PNG</span> · <span id="mini-size">1024px</span></div>
+    </div>
+    <button id="mobile-download-btn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+      Download
+    </button>
+  </div>
+</div>
+
+<!-- Toast notifications -->
+<div id="toast-container" class="fixed bottom-24 lg:bottom-8 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center gap-2 pointer-events-none"></div>
 
 <style>
   /* Accordion Item styles */
@@ -579,14 +715,64 @@
   
   /* Input range customizing */
   input[type="range"]::-webkit-slider-thumb {
-    box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
   }
 
   /* Style selected states for custom radio tabs */
   label:has(input[type="radio"]:checked) {
-    border-color: rgba(249, 115, 22, 0.4);
+    border-color: rgba(37, 99, 235, 0.4);
     background-color: rgba(15, 23, 42, 0.9);
-    color: #f97316;
+    color: #60a5fa;
+  }
+
+  /* Extra glow feedback for active preset / tab */
+  .preset-btn.active {
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25), 0 10px 30px -14px rgba(37, 99, 235, 0.5);
+  }
+
+  /* Contrast validation badge states */
+  #contrast-badge.state-ok {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #34d399;
+  }
+  #contrast-badge.state-ok #contrast-dot { background: #34d399; }
+
+  #contrast-badge.state-warn {
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: #fbbf24;
+  }
+  #contrast-badge.state-warn #contrast-dot { background: #fbbf24; }
+
+  #contrast-badge.state-bad {
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #f87171;
+  }
+  #contrast-badge.state-bad #contrast-dot { background: #f87171; }
+
+  #contrast-badge.state-info {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #94a3b8;
+  }
+  #contrast-badge.state-info #contrast-dot { background: #94a3b8; }
+
+  .tab-btn.active {
+    box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.2);
+  }
+
+  /* Floating mobile bar show/hide */
+  #mobile-bar {
+    transform: translateY(120%);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+  }
+
+  #mobile-bar.bar-visible {
+    transform: none;
+    opacity: 1;
   }
 </style>
 
@@ -614,12 +800,13 @@
     let uploadedLogoDataUrl = null;
     let isInitialized = false;
     let updateTimeout = null;
+    let currentDecoShape = null;
 
     // Default configuration options
     const defaultOptions = {
       width: 280,
       height: 280,
-      type: 'canvas',
+      type: 'svg',
       data: 'https://devcito.org',
       margin: 8,
       qrOptions: {
@@ -655,6 +842,212 @@
       qrCode.append(qrTarget);
     }
 
+    // --- TOAST NOTIFICATIONS ---
+    const toastContainer = document.getElementById('toast-container');
+    const toastSuccessIcon = '<svg class="toast-icon w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>';
+    const toastErrorIcon = '<svg class="toast-icon w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /></svg>';
+
+    function showToast(message, type = 'success') {
+      if (!toastContainer) return;
+      const toast = document.createElement('div');
+      toast.className = `toast ${type === 'error' ? 'toast-error' : 'toast-success'}`;
+      toast.innerHTML = `${type === 'error' ? toastErrorIcon : toastSuccessIcon}<span>${message}</span>`;
+      toastContainer.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add('toast-out');
+        setTimeout(() => toast.remove(), 260);
+      }, 2400);
+    }
+
+    // --- MOBILE MINI PREVIEW ---
+    const miniQr = document.getElementById('mini-qr');
+    const miniFormat = document.getElementById('mini-format');
+    const miniSize = document.getElementById('mini-size');
+
+    function refreshMini() {
+      if (!miniQr || !qrTarget) return;
+      const svg = qrTarget.querySelector('svg');
+      if (!svg) return;
+      try {
+        const clone = svg.cloneNode(true);
+        clone.removeAttribute('style');
+        clone.setAttribute('width', '120');
+        clone.setAttribute('height', '120');
+        miniQr.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(new XMLSerializer().serializeToString(clone));
+      } catch (e) {
+        // ignore mid-render failures
+      }
+    }
+
+    // --- CONTRAST VALIDATION ---
+    const contrastBadge = document.getElementById('contrast-badge');
+    const contrastText = document.getElementById('contrast-text');
+
+    // WCAG relative luminance from a hex color
+    function relLuminance(hex) {
+      const clean = hex.replace('#', '');
+      const full = clean.length === 3 ? clean.split('').map(c => c + c).join('') : clean;
+      const channels = [0, 2, 4].map(i => parseInt(full.slice(i, i + 2), 16) / 255)
+        .map(c => (c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)));
+      return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+    }
+
+    function contrastRatio(a, b) {
+      const lumA = relLuminance(a);
+      const lumB = relLuminance(b);
+      const hi = Math.max(lumA, lumB);
+      const lo = Math.min(lumA, lumB);
+      return (hi + 0.05) / (lo + 0.05);
+    }
+
+    function updateContrastBadge() {
+      if (!contrastBadge || !contrastText) return;
+
+      const bgTransparent = document.getElementById('bg-transparent').checked;
+      const colorMode = document.querySelector('input[name="dots-color-mode"]:checked')?.value || 'solid';
+      const dotsColors = colorMode === 'gradient'
+        ? [document.getElementById('dots-grad-color1').value, document.getElementById('dots-grad-color2').value]
+        : [document.getElementById('dots-color').value];
+
+      let state, message;
+
+      if (bgTransparent) {
+        state = 'info';
+        message = 'Transparent background · verify contrast on the final surface';
+      } else {
+        const bgColor = document.getElementById('bg-color').value;
+        // Worst case: the dot color with the lowest contrast against the background
+        const ratio = Math.min(...dotsColors.map(c => contrastRatio(c, bgColor)));
+        // Inverted QR (light modules on dark bg) is rejected by many scanners
+        const inverted = dotsColors.every(c => relLuminance(c) > relLuminance(bgColor));
+
+        if (inverted) {
+          state = 'warn';
+          message = `${ratio.toFixed(1)}:1 · Inverted colors, many scanners fail on this`;
+        } else if (ratio >= 7) {
+          state = 'ok';
+          message = `${ratio.toFixed(1)}:1 · High contrast, print-ready`;
+        } else if (ratio >= 4.5) {
+          state = 'ok';
+          message = `${ratio.toFixed(1)}:1 · Good contrast for scanning`;
+        } else if (ratio >= 3) {
+          state = 'warn';
+          message = `${ratio.toFixed(1)}:1 · Weak contrast, may fail in low light`;
+        } else {
+          state = 'bad';
+          message = `${ratio.toFixed(1)}:1 · Too low, this QR likely won't scan`;
+        }
+      }
+
+      contrastBadge.classList.remove('state-ok', 'state-warn', 'state-bad', 'state-info');
+      contrastBadge.classList.add(`state-${state}`);
+      contrastText.textContent = message;
+    }
+
+    // --- DECORATIVE DOT GLYPHS ---
+    // The library draws every dark module as a <rect x y w h> inside
+    // clipPath[id^="clip-path-dot-color"]. We replace each rect with a glyph
+    // path; the gradient/color rect that clips through it keeps working as-is.
+    function polygonPath(cx, cy, n, radius, rotationDeg) {
+      const pts = [];
+      for (let i = 0; i < n; i++) {
+        const a = ((rotationDeg + (i * 360) / n) * Math.PI) / 180;
+        pts.push(`${(cx + radius * Math.cos(a)).toFixed(2)} ${(cy + radius * Math.sin(a)).toFixed(2)}`);
+      }
+      return `M ${pts.join(' L ')} Z`;
+    }
+
+    function starPath(cx, cy, points, outer, inner, rotationDeg) {
+      const pts = [];
+      for (let i = 0; i < points * 2; i++) {
+        const r = i % 2 === 0 ? outer : inner;
+        const a = ((rotationDeg + (i * 180) / points) * Math.PI) / 180;
+        pts.push(`${(cx + r * Math.cos(a)).toFixed(2)} ${(cy + r * Math.sin(a)).toFixed(2)}`);
+      }
+      return `M ${pts.join(' L ')} Z`;
+    }
+
+    const DECO_SHAPES = {
+      'deco-heart': {
+        d: (cx, cy, s) =>
+          `M ${cx} ${(cy + s * 0.44).toFixed(2)} ` +
+          `C ${(cx - s * 0.62).toFixed(2)} ${(cy - s * 0.02).toFixed(2)}, ${(cx - s * 0.34).toFixed(2)} ${(cy - s * 0.5).toFixed(2)}, ${cx} ${(cy - s * 0.2).toFixed(2)} ` +
+          `C ${(cx + s * 0.34).toFixed(2)} ${(cy - s * 0.5).toFixed(2)}, ${(cx + s * 0.62).toFixed(2)} ${(cy - s * 0.02).toFixed(2)}, ${cx} ${(cy + s * 0.44).toFixed(2)} Z`
+      },
+      'deco-star': { d: (cx, cy, s) => starPath(cx, cy, 5, s * 0.62, s * 0.27, -90) },
+      'deco-sparkle': { d: (cx, cy, s) => starPath(cx, cy, 4, s * 0.64, s * 0.18, -90) },
+      'deco-diamond': { d: (cx, cy, s) => polygonPath(cx, cy, 4, s * 0.6, -90) },
+      'deco-hexagon': { d: (cx, cy, s) => polygonPath(cx, cy, 6, s * 0.6, -90) },
+      'deco-ring': {
+        evenOdd: true,
+        d: (cx, cy, s) => {
+          const ro = s * 0.58, ri = s * 0.28;
+          return (
+            `M ${cx - ro} ${cy} a ${ro} ${ro} 0 1 0 ${ro * 2} 0 a ${ro} ${ro} 0 1 0 ${-ro * 2} 0 Z ` +
+            `M ${cx - ri} ${cy} a ${ri} ${ri} 0 1 0 ${ri * 2} 0 a ${ri} ${ri} 0 1 0 ${-ri * 2} 0 Z`
+          );
+        }
+      }
+    };
+
+    function applyDecorativeDots() {
+      if (!currentDecoShape || !qrTarget) return;
+      const def = DECO_SHAPES[currentDecoShape];
+      if (!def) return;
+      const svg = qrTarget.querySelector('svg');
+      const clip = svg && svg.querySelector('clipPath[id^="clip-path-dot-color"]');
+      if (!clip) return;
+      clip.querySelectorAll('rect').forEach((rect) => {
+        const x = parseFloat(rect.getAttribute('x'));
+        const y = parseFloat(rect.getAttribute('y'));
+        const size = parseFloat(rect.getAttribute('width'));
+        if (!Number.isFinite(x) || !Number.isFinite(y) || !Number.isFinite(size) || size <= 0) return;
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', def.d(x + size / 2, y + size / 2, size));
+        if (def.evenOdd) path.setAttribute('fill-rule', 'evenodd');
+        rect.replaceWith(path);
+      });
+    }
+
+    // --- EXPORT HELPERS (serialize the live SVG so DOM decorations survive) ---
+    async function rasterizePx(px, bgFill) {
+      if (!qrTarget) return null;
+      const svg = qrTarget.querySelector('svg');
+      if (!svg) return null;
+      const clone = svg.cloneNode(true);
+      clone.removeAttribute('style');
+      clone.setAttribute('width', String(px));
+      clone.setAttribute('height', String(px));
+      const str = new XMLSerializer().serializeToString(clone);
+      const url = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(str);
+      const img = new Image();
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = () => reject(new Error('SVG rasterization failed'));
+        img.src = url;
+      });
+      const canvas = document.createElement('canvas');
+      canvas.width = px;
+      canvas.height = px;
+      const ctx = canvas.getContext('2d');
+      if (bgFill) {
+        ctx.fillStyle = bgFill;
+        ctx.fillRect(0, 0, px, px);
+      }
+      ctx.drawImage(img, 0, 0, px, px);
+      return canvas;
+    }
+
+    // Show the floating bar only while the generator section is on screen
+    const mobileBar = document.getElementById('mobile-bar');
+    const generatorSection = document.getElementById('generator');
+    if (mobileBar && generatorSection && 'IntersectionObserver' in window) {
+      const barObserver = new IntersectionObserver((entries) => {
+        mobileBar.classList.toggle('bar-visible', entries[0].isIntersecting);
+      }, { threshold: 0.08 });
+      barObserver.observe(generatorSection);
+    }
+
     // --- ACCORDION LOGIC ---
     const accordionToggles = document.querySelectorAll('.accordion-toggle');
     accordionToggles.forEach(toggle => {
@@ -667,10 +1060,12 @@
         // Close all first
         document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
         document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+        document.querySelectorAll('.accordion-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
         
         if (isClosed) {
           content.classList.remove('hidden');
           item.classList.add('active');
+          toggle.setAttribute('aria-expanded', 'true');
         }
       });
     });
@@ -679,6 +1074,7 @@
     if (firstAccordion) {
       firstAccordion.classList.add('active');
       firstAccordion.querySelector('.accordion-content').classList.remove('hidden');
+      firstAccordion.querySelector('.accordion-toggle').setAttribute('aria-expanded', 'true');
     }
 
     // --- STATE UPDATE FUNCTION ---
@@ -714,7 +1110,12 @@
       }
 
       // 2. Gather Dot Styling Options
-      const dotsShape = document.querySelector('input[name="dots-type"]:checked').value;
+      const rawDotsShape = document.querySelector('input[name="dots-type"]:checked').value;
+      // Decorative shapes are drawn by replacing each module glyph in the SVG clipPath,
+      // while the library renders plain squares underneath.
+      const isDecorative = rawDotsShape.startsWith('deco-');
+      currentDecoShape = isDecorative ? rawDotsShape : null;
+      const dotsShape = isDecorative ? 'square' : rawDotsShape;
       const dotsColorMode = document.querySelector('input[name="dots-color-mode"]:checked').value;
       
       let dotsOptionsObj = { type: dotsShape };
@@ -753,9 +1154,17 @@
       const logoMargin = parseInt(document.getElementById('logo-margin').value);
       const logoClear = document.getElementById('logo-clear').checked;
 
+      // 6. Error correction level
+      const eccLevel = document.getElementById('ecc-level')?.value || 'H';
+
       // Combine Options
       const updatedOptions = {
         data: qrData,
+        qrOptions: {
+          typeNumber: 0,
+          mode: 'Byte',
+          errorCorrectionLevel: eccLevel
+        },
         dotsOptions: dotsOptionsObj,
         backgroundOptions: {
           color: bgColor
@@ -796,7 +1205,14 @@
         }
       }
 
-      qrCode.update(updatedOptions);
+      updateContrastBadge();
+
+      Promise.resolve(qrCode.update(updatedOptions))
+        .then(() => {
+          applyDecorativeDots();
+          refreshMini();
+        })
+        .catch(() => {});
 
       if (isInitialized && qrTarget) {
         if (updateTimeout) {
@@ -826,9 +1242,11 @@
       btn.addEventListener('click', () => {
         // Toggle tabs active class
         tabBtns.forEach(b => {
-          b.classList.remove('active', 'bg-white/5', 'text-orange-400');
+          b.classList.remove('active', 'bg-white/5', 'text-sky-300');
+          b.setAttribute('aria-selected', 'false');
         });
-        btn.classList.add('active', 'bg-white/5', 'text-orange-400');
+        btn.classList.add('active', 'bg-white/5', 'text-sky-300');
+        btn.setAttribute('aria-selected', 'true');
 
         // Toggle visibility of target forms
         const targetType = btn.getAttribute('data-type');
@@ -940,7 +1358,7 @@
       'email-to', 'email-subject', 'email-body',
       'sms-phone', 'sms-message',
       'dots-color', 'dots-grad-color1', 'dots-grad-color2', 'dots-grad-type', 'dots-grad-rotation',
-      'corners-square-color', 'corners-dot-color', 'bg-color', 'logo-clear'
+      'corners-square-color', 'corners-dot-color', 'bg-color', 'logo-clear', 'ecc-level'
     ];
     inputsToWatch.forEach(id => {
       const el = document.getElementById(id);
@@ -963,10 +1381,10 @@
       btn.addEventListener('click', () => {
         // Toggle Active
         presetBtns.forEach(b => {
-          b.classList.remove('active', 'border-orange-500/30', 'bg-slate-950/50');
+          b.classList.remove('active', 'border-blue-500/30', 'bg-slate-950/50');
           b.classList.add('border-white/5', 'bg-slate-950/30');
         });
-        btn.classList.add('active', 'border-orange-500/30', 'bg-slate-950/50');
+        btn.classList.add('active', 'border-blue-500/30', 'bg-slate-950/50');
         btn.classList.remove('border-white/5', 'bg-slate-950/30');
 
         const preset = btn.getAttribute('data-preset');
@@ -974,148 +1392,55 @@
       });
     });
 
+    // --- DESIGN PRESETS CONFIG ---
+    // To add a preset: extend this map and add a button with data-preset="<key>".
+    const PRESETS = {
+      sunset:    { dotsType: 'classy-rounded', mode: 'gradient', c1: '#f97316', c2: '#27272a', gradType: 'linear', rot: 45,  sqType: 'extra-rounded', sqColor: '#f97316', dotType: 'dot',    dotColor: '#71717a', bg: '#ffffff' },
+      cyberpunk: { dotsType: 'dots',           mode: 'gradient', c1: '#00f5ff', c2: '#3f3f46', gradType: 'linear', rot: 90,  sqType: 'square',        sqColor: '#00f5ff', dotType: 'square', dotColor: '#71717a', bg: '#07080a' },
+      midnight:  { dotsType: 'rounded',        mode: 'solid',   solid: '#18181b',                                              sqType: 'extra-rounded', sqColor: '#18181b', dotType: 'dot',    dotColor: '#27272a', bg: '#f4f4f5' },
+      forest:    { dotsType: 'extra-rounded',  mode: 'gradient', c1: '#94a3b8', c2: '#334155', gradType: 'linear', rot: 135, sqType: 'extra-rounded', sqColor: '#475569', dotType: 'dot',    dotColor: '#94a3b8', bg: '#ffffff' },
+      royal:     { dotsType: 'classy',         mode: 'gradient', c1: '#ea580c', c2: '#7c2d12', gradType: 'radial', rot: 0,   sqType: 'extra-rounded', sqColor: '#7c2d12', dotType: 'dot',    dotColor: '#ea580c', bg: '#ffffff' },
+      ocean:     { dotsType: 'extra-rounded',  mode: 'gradient', c1: '#2563eb', c2: '#06b6d4', gradType: 'linear', rot: 45,  sqType: 'extra-rounded', sqColor: '#2563eb', dotType: 'dot',    dotColor: '#06b6d4', bg: '#ffffff' },
+      ink:       { dotsType: 'rounded',        mode: 'gradient', c1: '#312e81', c2: '#0ea5e9', gradType: 'linear', rot: 90,  sqType: 'dot',           sqColor: '#0ea5e9', dotType: 'dot',    dotColor: '#312e81', bg: '#ffffff' },
+      jade:      { dotsType: 'classy-rounded', mode: 'gradient', c1: '#10b981', c2: '#134e4a', gradType: 'linear', rot: 135, sqType: 'square',        sqColor: '#134e4a', dotType: 'square', dotColor: '#10b981', bg: '#ffffff' },
+      rose:      { dotsType: 'dots',           mode: 'gradient', c1: '#f43f5e', c2: '#fbbf24', gradType: 'radial', rot: 0,   sqType: 'extra-rounded', sqColor: '#f43f5e', dotType: 'dot',    dotColor: '#fbbf24', bg: '#ffffff' },
+      violet:    { dotsType: 'dots',           mode: 'gradient', c1: '#8b5cf6', c2: '#d946ef', gradType: 'radial', rot: 0,   sqType: 'dot',           sqColor: '#8b5cf6', dotType: 'square', dotColor: '#d946ef', bg: '#ffffff' },
+      executive: { dotsType: 'extra-rounded',  mode: 'solid',   solid: '#1e293b',                                              sqType: 'extra-rounded', sqColor: '#1e293b', dotType: 'dot',    dotColor: '#0f172a', bg: '#f8fafc' },
+      standard:  { dotsType: 'square',         mode: 'solid',   solid: '#000000',                                              sqType: 'square',        sqColor: '#000000', dotType: 'square', dotColor: '#000000', bg: '#ffffff' }
+    };
+
     function applyPreset(name) {
-      if (name === 'sunset') {
-        // Stealth Carbon preset
-        // Dots
-        setRadioVal('dots-type', 'classy-rounded');
-        setRadioVal('dots-color-mode', 'gradient');
+      const p = PRESETS[name] || PRESETS.standard;
+
+      // Dots
+      setRadioVal('dots-type', p.dotsType);
+      setRadioVal('dots-color-mode', p.mode);
+      if (p.mode === 'gradient') {
         solidChoice.classList.add('hidden');
         gradChoice.classList.remove('hidden');
-        document.getElementById('dots-grad-color1').value = '#f97316';
-        document.getElementById('dots-grad-color2').value = '#27272a';
-        document.getElementById('dots-grad-type').value = 'linear';
-        document.getElementById('dots-grad-rotation').value = '45';
-        dotsGradRotationVal.textContent = '45°';
-
-        // Corners
-        setRadioVal('corners-square-type', 'extra-rounded');
-        document.getElementById('corners-square-color').value = '#f97316';
-        setRadioVal('corners-dot-type', 'dot');
-        document.getElementById('corners-dot-color').value = '#71717a';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#ffffff';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
-
-      } else if (name === 'cyberpunk') {
-        // Stealth Cyber preset
-        // Dots
-        setRadioVal('dots-type', 'dots');
-        setRadioVal('dots-color-mode', 'gradient');
-        solidChoice.classList.add('hidden');
-        gradChoice.classList.remove('hidden');
-        document.getElementById('dots-grad-color1').value = '#00f5ff';
-        document.getElementById('dots-grad-color2').value = '#3f3f46';
-        document.getElementById('dots-grad-type').value = 'linear';
-        document.getElementById('dots-grad-rotation').value = '90';
-        dotsGradRotationVal.textContent = '90°';
-
-        // Corners
-        setRadioVal('corners-square-type', 'square');
-        document.getElementById('corners-square-color').value = '#00f5ff';
-        setRadioVal('corners-dot-type', 'square');
-        document.getElementById('corners-dot-color').value = '#71717a';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#07080a';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
-
-      } else if (name === 'midnight') {
-        // Obsidian Matte preset
-        // Dots
-        setRadioVal('dots-type', 'rounded');
-        setRadioVal('dots-color-mode', 'solid');
+        document.getElementById('dots-grad-color1').value = p.c1;
+        document.getElementById('dots-grad-color2').value = p.c2;
+        document.getElementById('dots-grad-type').value = p.gradType;
+        document.getElementById('dots-grad-rotation').value = p.rot;
+        dotsGradRotationVal.textContent = p.rot + String.fromCharCode(176);
+      } else {
         solidChoice.classList.remove('hidden');
         gradChoice.classList.add('hidden');
-        document.getElementById('dots-color').value = '#18181b';
-
-        // Corners
-        setRadioVal('corners-square-type', 'extra-rounded');
-        document.getElementById('corners-square-color').value = '#18181b';
-        setRadioVal('corners-dot-type', 'dot');
-        document.getElementById('corners-dot-color').value = '#27272a';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#f4f4f5';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
-
-      } else if (name === 'forest') {
-        // Bionic Steel preset
-        // Dots
-        setRadioVal('dots-type', 'extra-rounded');
-        setRadioVal('dots-color-mode', 'gradient');
-        solidChoice.classList.add('hidden');
-        gradChoice.classList.remove('hidden');
-        document.getElementById('dots-grad-color1').value = '#94a3b8';
-        document.getElementById('dots-grad-color2').value = '#334155';
-        document.getElementById('dots-grad-type').value = 'linear';
-        document.getElementById('dots-grad-rotation').value = '135';
-        dotsGradRotationVal.textContent = '135°';
-
-        // Corners
-        setRadioVal('corners-square-type', 'extra-rounded');
-        document.getElementById('corners-square-color').value = '#475569';
-        setRadioVal('corners-dot-type', 'dot');
-        document.getElementById('corners-dot-color').value = '#94a3b8';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#ffffff';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
-
-      } else if (name === 'royal') {
-        // Copper Alloy preset
-        // Dots
-        setRadioVal('dots-type', 'classy');
-        setRadioVal('dots-color-mode', 'gradient');
-        solidChoice.classList.add('hidden');
-        gradChoice.classList.remove('hidden');
-        document.getElementById('dots-grad-color1').value = '#ea580c';
-        document.getElementById('dots-grad-color2').value = '#7c2d12';
-        document.getElementById('dots-grad-type').value = 'radial';
-        document.getElementById('dots-grad-rotation').value = '0';
-        dotsGradRotationVal.textContent = '0°';
-
-        // Corners
-        setRadioVal('corners-square-type', 'extra-rounded');
-        document.getElementById('corners-square-color').value = '#7c2d12';
-        setRadioVal('corners-dot-type', 'dot');
-        document.getElementById('corners-dot-color').value = '#ea580c';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#ffffff';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
-
-      } else if (name === 'standard') {
-        // Default standard black and white
-        setRadioVal('dots-type', 'square');
-        setRadioVal('dots-color-mode', 'solid');
-        solidChoice.classList.remove('hidden');
-        gradChoice.classList.add('hidden');
-        document.getElementById('dots-color').value = '#000000';
-
-        // Corners
-        setRadioVal('corners-square-type', 'square');
-        document.getElementById('corners-square-color').value = '#000000';
-        setRadioVal('corners-dot-type', 'square');
-        document.getElementById('corners-dot-color').value = '#000000';
-
-        // Background
-        document.getElementById('bg-transparent').checked = false;
-        document.getElementById('bg-color').value = '#ffffff';
-        bgColorWrapper.style.opacity = '1';
-        bgColorWrapper.style.pointerEvents = 'auto';
+        document.getElementById('dots-color').value = p.solid;
       }
+
+      // Corners
+      setRadioVal('corners-square-type', p.sqType);
+      document.getElementById('corners-square-color').value = p.sqColor;
+      setRadioVal('corners-dot-type', p.dotType);
+      document.getElementById('corners-dot-color').value = p.dotColor;
+
+      // Background (every preset ships an explicit, scannable background)
+      document.getElementById('bg-transparent').checked = false;
+      document.getElementById('bg-color').value = p.bg;
+      bgColorWrapper.style.opacity = '1';
+      bgColorWrapper.style.pointerEvents = 'auto';
+
       updateQR();
     }
 
@@ -1154,63 +1479,113 @@
       
       // Update active preset button styling
       presetBtns.forEach(b => {
-        b.classList.remove('active', 'border-orange-500/30', 'bg-slate-950/50');
+        b.classList.remove('active', 'border-blue-500/30', 'bg-slate-950/50');
         b.classList.add('border-white/5', 'bg-slate-950/30');
       });
       const standardBtn = document.querySelector('[data-preset="standard"]');
       if (standardBtn) {
-        standardBtn.classList.add('active', 'border-orange-500/30', 'bg-slate-950/50');
+        standardBtn.classList.add('active', 'border-blue-500/30', 'bg-slate-950/50');
         standardBtn.classList.remove('border-white/5', 'bg-slate-950/30');
       }
     });
 
-    // --- EXPORT FORMAT SELECTOR ---
     const formatBtns = document.querySelectorAll('.format-btn');
     formatBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         formatBtns.forEach(b => {
-          b.classList.remove('border-orange-500/30', 'bg-orange-500/10', 'text-orange-400');
+          b.classList.remove('border-blue-500/30', 'bg-blue-500/10', 'text-sky-300');
           b.classList.add('border-white/5', 'bg-slate-950/40', 'text-gray-400');
         });
-        btn.classList.add('border-orange-500/30', 'bg-orange-500/10', 'text-orange-400');
+        btn.classList.add('border-blue-500/30', 'bg-blue-500/10', 'text-sky-300');
         btn.classList.remove('border-white/5', 'bg-slate-950/40', 'text-gray-400');
         
         currentFormat = btn.getAttribute('data-format');
+        if (miniFormat) miniFormat.textContent = currentFormat.toUpperCase();
       });
     });
 
-    // --- DOWNLOAD LOGIC ---
-    const downloadBtn = document.getElementById('download-btn');
-    downloadBtn.addEventListener('click', async () => {
-      downloadBtn.disabled = true;
-      const originalText = downloadBtn.innerHTML;
-      downloadBtn.innerHTML = `
+    // --- EXPORT RESOLUTION SLIDER (affects downloads, not the live preview) ---
+    const exportSizeSlider = document.getElementById('export-size');
+    const exportSizeVal = document.getElementById('export-size-val');
+    if (exportSizeSlider) {
+      exportSizeSlider.addEventListener('input', (e) => {
+        exportSizeVal.textContent = `${e.target.value}px`;
+        if (miniSize) miniSize.textContent = `${e.target.value}px`;
+      });
+    }
+
+    // --- DOWNLOAD LOGIC (shared by desktop and mobile bar buttons) ---
+    // Custom export: the library's own download() re-renders from the QR matrix
+    // and would lose our decorative glyphs, so we serialize the live SVG instead.
+    async function performDownload(btn) {
+      btn.disabled = true;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `
         <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
         </svg>
-        Downloading...
+        Preparing...
       `;
-      
+
+      const exportSize = parseInt(exportSizeSlider?.value || '1024', 10);
+
       try {
-        await qrCode.download({
-          name: `qreative_qr_${Date.now()}`,
-          extension: currentFormat
-        });
+        let blob;
+        if (currentFormat === 'svg') {
+          const svg = qrTarget && qrTarget.querySelector('svg');
+          if (!svg) throw new Error('QR not rendered yet');
+          const str = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(svg);
+          blob = new Blob([str], { type: 'image/svg+xml;charset=utf-8' });
+        } else {
+          // JPEG needs an opaque background; PNG keeps alpha (or the chosen bg color)
+          let bgFill = null;
+          if (currentFormat === 'jpeg') {
+            bgFill = document.getElementById('bg-transparent').checked
+              ? '#ffffff'
+              : document.getElementById('bg-color').value;
+          }
+          const canvas = await rasterizePx(exportSize, bgFill);
+          if (!canvas) throw new Error('QR not rendered yet');
+          blob = await new Promise((resolve) =>
+            canvas.toBlob(resolve, currentFormat === 'jpeg' ? 'image/jpeg' : 'image/png', 0.92)
+          );
+          if (!blob) throw new Error('Blob generation failed');
+        }
+
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `qreative_qr_${Date.now()}.${currentFormat}`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+
+        showToast(`Downloaded as ${currentFormat.toUpperCase()}${currentFormat !== 'svg' ? ` (${exportSize}px)` : ''}`);
       } catch (err) {
         console.error('Error downloading QR code:', err);
+        showToast('Download failed. Please try again.', 'error');
       } finally {
-        downloadBtn.innerHTML = originalText;
-        downloadBtn.disabled = false;
+        btn.innerHTML = originalText;
+        btn.disabled = false;
       }
-    });
+    }
+
+    const downloadBtn = document.getElementById('download-btn');
+    downloadBtn.addEventListener('click', () => performDownload(downloadBtn));
+
+    const mobileDownloadBtn = document.getElementById('mobile-download-btn');
+    if (mobileDownloadBtn) {
+      mobileDownloadBtn.addEventListener('click', () => performDownload(mobileDownloadBtn));
+    }
 
     // --- COPY TO CLIPBOARD LOGIC (IMAGE) ---
     const copyBtn = document.getElementById('copy-btn');
     copyBtn.addEventListener('click', async () => {
-      const canvas = qrTarget.querySelector('canvas');
-      if (!canvas) {
-        alert('Sorry, we couldn\'t find the QR code image to copy.');
+      const svgEl = qrTarget && qrTarget.querySelector('svg');
+      if (!svgEl) {
+        showToast('QR image is not ready yet. Try again in a second.', 'error');
         return;
       }
 
@@ -1225,36 +1600,28 @@
       `;
 
       try {
-        // We convert the canvas to a blob
-        canvas.toBlob(async (blob) => {
-          if (!blob) {
-            alert('Failed to generate image to copy.');
-            return;
-          }
-          try {
-            // Write blob to Clipboard
-            const data = [new ClipboardItem({ [blob.type]: blob })];
-            await navigator.clipboard.write(data);
-            
-            // Show Success UI
-            copyBtn.innerHTML = `
-              <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              Copied successfully!
-            `;
-          } catch (e) {
-            console.error('Error writing image to clipboard:', e);
-            alert('Error copying. Your browser might not support copying images to the clipboard.');
-          } finally {
-            setTimeout(() => {
-              copyBtn.innerHTML = originalText;
-              copyBtn.disabled = false;
-            }, 2500);
-          }
-        }, 'image/png');
+        const canvas = await rasterizePx(1024, null);
+        if (!canvas) throw new Error('QR not rendered');
+
+        const blob = await new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+        if (!blob) throw new Error('Blob generation failed');
+
+        await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+
+        // Show Success UI
+        copyBtn.innerHTML = `
+          <svg class="w-4 h-4 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+          Copied successfully!
+        `;
+        showToast('QR copied to clipboard');
       } catch (err) {
-        console.error('Failed to copy canvas:', err);
-        copyBtn.innerHTML = originalText;
-        copyBtn.disabled = false;
+        console.error('Error copying image to clipboard:', err);
+        showToast('Your browser doesn\'t support copying images.', 'error');
+      } finally {
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+          copyBtn.disabled = false;
+        }, 2500);
       }
     });
 

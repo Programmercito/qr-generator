@@ -7,12 +7,29 @@ interface Props {
 }
 
 const { 
-	title = "Qreative - Beautiful Custom QR Codes for Free", 
-	description = "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo and export in high-res SVG, PNG or JPEG. 100% in your browser." 
+	title = "Free QR Code Generator with Logo | Qreative",
+	description = "Create custom QR codes for links, Wi-Fi, contacts and more. Add a logo and download SVG, PNG or JPEG for free. Generate privately in your browser."
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://qr.devcito.org').href;
-const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
+const siteUrl = new URL('/', Astro.site || 'https://qr.devcito.org').href;
+const ogImageUrl = new URL('/og-image.png', siteUrl).href;
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'WebApplication',
+	name: 'Qreative',
+	url: siteUrl,
+	description,
+	image: ogImageUrl,
+	applicationCategory: 'UtilityApplication',
+	operatingSystem: 'Any',
+	browserRequirements: 'Requires JavaScript and HTML5.',
+	offers: {
+		'@type': 'Offer',
+		price: '0',
+		priceCurrency: 'USD',
+	},
+};
 ---
 
 <!doctype html>
@@ -22,6 +39,10 @@ const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Font loading performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		
 		<!-- SEO Meta Tags -->
 		<title>{title}</title>
@@ -38,34 +59,21 @@ const ogImageUrl = new URL('/og-image.png', canonicalUrl).href;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:width" content="1024" />
+		<meta property="og:image:height" content="1024" />
+		<meta property="og:image:alt" content="Qreative custom QR code generator" />
 
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalUrl} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={ogImageUrl} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+		<meta name="twitter:image:alt" content="Qreative custom QR code generator" />
 
 		<!-- JSON-LD Structured Data for SEO -->
-		<script type="application/ld+json" is:inline>
-			{
-				"@context": "https://schema.org",
-				"@type": "WebApplication",
-				"name": "Qreative",
-				"url": "https://qr.devcito.org",
-				"description": "Design premium QR codes for free and privately. Customize gradients, dots, corners, upload your logo, and export in high-resolution SVG, PNG, or JPEG formats.",
-				"applicationCategory": "UtilityApplication",
-				"operatingSystem": "All",
-				"browserRequirements": "Requires JavaScript. Requires HTML5.",
-				"offers": {
-					"@type": "Offer",
-					"price": "0.00",
-					"priceCurrency": "USD"
-				}
-			}
-		</script>
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
 	</head>
-	<body class="bg-[#0b0f19] text-gray-100 min-h-screen flex flex-col font-sans antialiased selection:bg-purple-500/30 selection:text-purple-200">
+	<body class="text-gray-100 min-h-screen flex flex-col font-sans antialiased selection:bg-blue-500/30 selection:text-blue-200">
 		<slot />
 	</body>
 </html>
